@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单</title>
+</head>
+<body>
+    <form action="XXXX" method="post">
+    <div class="username">
+        <label for="username">姓名：</label>
+        <input type="text" id="username" placeholder="用户名" name="username">
+    </div>
+    <div class="password">
+        <label for="password">密码：</label>
+        <input type="password" name="password" id="password">
+    </div>
+    <div class="sex">
+        <label for="sex">性别：</label>
+        <input type="radio" name="sex" id="sex" value="0">男
+        <input type="radio" name="sex" id="sex" value="1" checked>女
+    </div>
+    <div class="hobby">
+        <label for="hobby">爱好：</label>
+        <input type="checkbox" name="hobby" id="hobby" value="0">dota
+        <input type="checkbox" name="hobby" id="hobby" value="1" checked>旅游
+        <input type="checkbox" name="hobby" id="hobby" value="2" checked>宠物
+    </div>
+    <div class="comment">
+        <label for="comment">评论：</label>
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="ddd"></textarea>
+    </div>
+    <div class="car">
+        <label for="car">我的car：</label>
+        <select id="car" name="car">
+            <option value="0">宝马</option>
+            <option value="1" selected>奔驰</option>
+            <option value="2">捷豹</option>
+            <option value="3">特斯拉</option>
+        </select>
+    </div>
+    <div class="submit">
+        <button type="sumit">提交</button>
+    </div>
+</form>
+</body>
+</html>
