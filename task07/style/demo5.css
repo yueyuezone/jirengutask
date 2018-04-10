@@ -1,0 +1,35 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+.container>div {
+    margin-top: 20px;
+}
+.box p {
+    width: 0;
+    height: 0;
+    border: 30px solid #000;
+}
+.box.arrows_1 p{
+    border-color: blue yellow green red;
+}
+.box.arrows_2 p{
+    border-color: blue transparent transparent transparent;
+}
+.box.arrows_3 p{
+    border-color: transparent transparent transparent red;
+}
+.box.arrows_4 p{
+    border-color: transparent yellow transparent transparent;
+}
+.box.arrows_5 p{
+    border-color: transparent transparent green transparent;
+}
+.box.arrows_6 p{
+    border-width: 20px;
+    border-color: transparent transparent red red;
+}
+.box.arrows_7 p{
+    border-width:20px;
+    border-color: transparent green green transparent;
+}

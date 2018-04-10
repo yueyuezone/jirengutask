@@ -1,0 +1,36 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+.container>.table_box {
+    margin-top: 30px;
+}
+.table_box {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.table_box tr {
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+.table_box th {
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 8px 8px;
+    font-weight: bold;
+}
+.table_box td {
+    padding: 8px 8px;
+}
+.table_box tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+.table_box.style_1 {
+    border:none;
+}
+.table_box.style_1 th{
+    background-color: #fff;
+    color: #000;
+}

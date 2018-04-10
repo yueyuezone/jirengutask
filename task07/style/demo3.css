@@ -1,0 +1,29 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+.container .button_dip {
+    display: inline-block;
+    padding:8px 10px;
+    border-radius: 3px;
+    color:#000;
+    text-decoration: none;
+}
+.button_dip.steal {
+    background-color: #009688;
+    color: #fff;
+}
+.button_dip.yellow {
+    background-color: #ffeb3b;
+}
+.button_dip.orange {
+    background-color: orange;
+}
+.button_dip.red {
+    background-color: red;
+    color: #fff;
+}
+.button_dip.green {
+    background-color: #4CAF50;
+    color: #fff;
+}

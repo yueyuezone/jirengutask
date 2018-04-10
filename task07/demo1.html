@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/demo1.css">
+</head>
+
+<body>
+    <div class="container">
+        <blockquote>
+            首先,不存在不可继承的属性，只要子元素和父元素设置相同的属性， 在子元素的属性处设置相同的属性，给值赋值，inherit
+        </blockquote>
+        <div class="demo1">
+            <h4>例子：</h4>
+            <p>padding是不可继承的属性，但是只要给子元素，设置padding:inherit， 子元素也继承了父元素的padding属性
+            </p>
+            <div class="demo1_case">
+                <div class="">背景颜色</div>
+            </div>
+        </div>
+        <h2>可继承属性</h2>
+        <ul>
+            <li>文字相关：font-family、font-size、font-style、font-variant、font-weight、font、letter-spacing、line-height、text-align、text-indent、text-transform、word-spacing</li>
+            <li>列表相关：list-style-image、list-style-position、list-style-type、list-style</li>
+            <li>颜色相关:color</li>
+            <li>透明度：opacity(opacity的继承有问题，子元素会继承祖元素的opacity，但是无法更改。)
+                </li>
+            <p>另外，font-size继承的是父元素的大小，而不是比例。line-height当父元素是百分比或px值的时候，子元素跟父元素相同，当父元素是normal或数字的时候，子元素的line-height是子元素的字体大小乘以数字</p>
+        </ul>
+        <div class="demo2">
+            <h4>例子：</h4>
+            <div class="compare_demo">
+                <div class="parent_el">
+                    <div class="child_el">
+                    </div>
+                </div>
+                <div class="parent_el">
+                    <div class="child_el">
+                    </div>
+                </div>
+            </div>
+            <p>前一个框没有对cursor有什么设置，后一个框设置了cursor：pointer</p>
+
+        </div>
+        <div class="demo4">
+                <div class="parent_el">
+                    <span>内联元素</span>
+                </div>
+                <div class="parent_el">
+                    <h3>块状元素</h3>
+                </div>
+        </div>
+        <p>第一个内联元素，和后面的块状元素都对其父元素设置了color：#fff</p>
+        <h2>不可继承属性</h2>
+        <p>display、margin、border、padding、background、height、min-height、max-height、width、min-width、max-width、overflow、position、left、right、top、bottom、z-index、float、clear、table-layout、vertical-align、page-break-after、page-bread-before和unicode-bidi</p>
+        <div class="demo3">
+            <h4>例子：</h4>
+            <div class="parent_el">
+                <div class="child_el">
+                </div>
+            </div>
+            <p>给外面的父元素设置了padding，里面的元素并不起作用</p>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

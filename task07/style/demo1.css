@@ -1,0 +1,45 @@
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+.container blockquote {
+    border-left: 3px #3AA7ED solid;
+    padding: 5px;
+    background: #E4F3FF;
+}
+.demo1_case {
+    padding: 10px;
+    background: #3AA7ED;
+}
+.demo1_case div{
+    background: #E4F3FF;
+    padding:inherit;
+}
+.compare_demo {
+    display: flex;
+}
+.demo2 .parent_el {
+    padding: 30px;
+    background: #3AA7ED;
+    margin-right: 40px;
+    width: 200px;
+}
+.demo2 .child_el {
+    padding: 30px;
+    background: #E4F3FF;
+}
+.demo2 .compare_demo .parent_el:nth-child(2){
+    cursor:pointer;
+}
+.demo3 .parent_el {
+    padding: 30px;
+    background: #3AA7ED;
+    width: 200px;
+}
+.demo3 .child_el {
+    background: #E4F3FF;
+}
+.demo4 .parent_el {
+    background: #3AA7ED;
+    color: #fff;
+}
