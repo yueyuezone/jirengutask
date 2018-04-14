@@ -1,0 +1,34 @@
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+.box1 {
+    width: 512px;
+    height: 512px; 
+    background: url('../image/css_sprites.png') -10px -10px;
+}
+.box1:hover {
+    background-position:-542px -10px; 
+}
+.box2 {
+   
+        width: 256px; height: 256px;
+        background: url('../image/css_sprites.png') -10px -1074px;
+    
+}
+.box2:hover {
+    width: 256px; height: 256px;
+    background: url('../image/css_sprites.png') -286px -1074px;
+}
+.box3 {
+    opacity:0;
+    height: 80px;
+    width: 60px;
+}
+.box_sun {
+    opacity: 1;
+    height: 60px;
+    width: 30px;
+    background: mediumaquamarine;
+}
