@@ -1,0 +1,35 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+
+}
+.container>.alert_box {
+    margin-top: 30px;
+    color: #fff;
+    padding: 1px 16px;
+    line-height: 1.5;
+    border-radius: 3px;
+    position: relative;
+}
+.alert_box.success {
+    background-color: #4caf50;
+}
+.alert_box.info {
+    background-color: #2196f3;
+}
+.alert_box.danger {
+    background-color: #f44336;
+}
+.alert_box.warning {
+    background-color: #ff9800;
+}
+.alert_box .close {
+    position: absolute;
+    font-size: 24px;
+    cursor: pointer;
+    right: 16px;
+}
+.alert_box>h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
