@@ -2,28 +2,31 @@
     width: 600px;
     margin: 0 auto;
 }
-.container .button_dip {
+.button_dip {
     display: inline-block;
     padding:8px 10px;
     border-radius: 3px;
     color:#000;
     text-decoration: none;
 }
-.button_dip.steal {
+.container .button_dip:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.steal {
     background-color: #009688;
     color: #fff;
 }
-.button_dip.yellow {
+.yellow {
     background-color: #ffeb3b;
 }
-.button_dip.orange {
+.orange {
     background-color: orange;
 }
-.button_dip.red {
+.red {
     background-color: red;
     color: #fff;
 }
-.button_dip.green {
+.green {
     background-color: #4CAF50;
     color: #fff;
 }
