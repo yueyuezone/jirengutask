@@ -1,0 +1,58 @@
+div,h1,h2,h3,h4,h5,h6,ul,li,p{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font:14px/1.4 "Lantinghei SC",Arial,"Open Sans","Hiragino Sans GB","Microsoft YaHei";
+    text-align: center;
+    color: #87968e;
+    background-color: #fff2e3;
+}
+.header,.content,footer {
+    width: 800px;
+    margin: 0 auto;
+}
+.header h1.title {
+    margin-top: 30px;
+    font-size: 42px;
+}
+.header .description {
+    margin-top: 10px;
+    opacity: 0.6;
+}
+.tabs-btn {
+    margin: 40px 0;
+}
+.btn {
+    display: inline-block;
+    margin: 3px;
+    padding:6px 14px;
+    font-weight: normal;
+    border-radius: 2px;
+    background-color: #72b890;
+    color:#fff;
+}
+.tabs-btn>li {
+    display: inline-block;
+}
+.extend {
+    margin-top: 30px;
+}
+.footer {
+    margin-top: 30px;
+}
+.footer>p>a{
+    color: #72b890;
+}
+.btn.active {
+    opacity: 0.6;
+}
+.btn:hover {
+    opacity: 0.8;
+}
