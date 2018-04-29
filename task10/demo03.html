@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/demo03.css">
+</head>
+
+<body>
+    <div class="layout">
+        <h3>1.处于同一bfc中两个block-level box的margin重合</h3>
+        <div class="content1">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+        <p>给以上两个box同时设置margin:10px;按理出现的连个box上下边距为20px的情况没有出现， 而是两个box上下margin为10px
+        </p>
+        <spans>解决方式：使box1脱离正常文档流形成bfc的方式。</spans>
+        <div class="content1 use1">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+        <spans>解决方式：使任一box和另外一box处于不同的bfc中，给box添加父元素，使父元素生成bfc</spans>
+        <div class="content1 use2">
+            <div class="box1"></div>
+            <div class="wrap">
+                <div class="box2"></div>
+            </div>
+        </div>
+        <h3>2.父子元素的margin重合</h3>
+        <div class="container2">
+            <div class="box1">
+                <div class="box2"></div>
+            </div>
+        </div>
+        <p>给最里面的box设置margin：10px；理论上是相对于父元素的margin设置，而父元素不该受影响,而实际情况是父元素相对于其wrap元素发生了margin：10px的情况
+        </p>
+        <spans>解决方式：给父元素添加padding或者border</spans>
+        <div class="container2">
+                <div class="box1 use1">
+                    <div class="box2"></div>
+                </div>
+            </div>
+        <h3>3.空元素margin合并</h3>
+        <div class="content3">
+            <div class="box"></div>
+            <div class="box1"></div>
+            <div class="box"></div>
+        </div>
+        <p>在两个box中间的空box，设置了margin：10px；理论应该margin-top+ margin-bottom；共20px；实际为10px；
+        </p>
+        <span>解决方式：给空元素添加border，padding，行内元素，height，min-height分隔</span>
+    </div>
+</body>
+
+</html>

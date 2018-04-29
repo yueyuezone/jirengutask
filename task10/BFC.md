@@ -18,4 +18,5 @@
  5. position:absolute|fixed
 
  ### BFC作用
- 
+ 1. 清除浮动
+ >计算bfc的高度时候，浮动元素也参与计算

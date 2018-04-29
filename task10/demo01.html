@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/demo01.css">
+</head>
+
+<body>
+    <div class="ct">
+        <h3>1.清除浮动</h3>
+        <span>计算BFC的高度时，浮动元素也参与计算。</span>
+        <div class="before">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+        <p class="margin_box">使用overflow:hidden的方式</p>
+        <div class="after clearbox1">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+        <p>使用float不为none的方式</p>
+        <div class="after clearbox2">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+        <p class="margin_box">position:absolute|fixed</p>
+        <div class="position_box">
+            <div class="after clearbox3">
+                <div class="box1"></div>
+                <div class="box2"></div>
+            </div>
+        </div>
+        <p class="margin_box">display:inline-block|table-cell|table-caption|flex|inline-flex</p>
+        <div class="after clearbox4">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+        <h3>2.自适应两栏布局</h3>
+        <span>bfc的区域不会和float box重叠。</span>
+        <div class="use2">
+            <div class="ct1"></div>
+            <div class="ct2"></div>
+        </div>
+        <p>生成bfc</p>
+        <div class="use2 change">
+            <div class="ct1"></div>
+            <div class="ct2"></div>
+        </div>
+        <h3>3.清除box的margin重叠</h3>
+        <span>box垂直方向的距离由margin决定,属于同一个bfc的两个相邻box的margin会发生重叠</span>
+        <div class="use3">
+            <div class="ct1"></div>
+            
+            <div class="ct2"></div>
+        </div>
+        <em>此两个box各设置margin为10px，上下边距发生重叠，为10px</em>
+        <p>因为这两个box处于同一个bfc中，所以上下边距发生重叠，给下一个box外面包一个wrap，将wrap元素生成为bfc，那么两个box处于不同的bfc中，即可以消除margin重叠</p>
+        <div class="use3">
+                <div class="ct1"></div>
+                <div class="ct2_wrap"><div class="ct2"></div></div>
+                
+            </div>
+    </div>
+
+</body>
+
+</html>
