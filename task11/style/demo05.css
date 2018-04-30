@@ -1,0 +1,30 @@
+.layout {
+    width: 800px;
+    margin: 0 auto;
+    background: #ccc;
+    padding: 30px;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.btn-tabs {
+    text-align: center;
+    font-size: 0px;
+}
+.btn-tabs>li {
+    display: inline-block;
+    font-size: 0px;
+    margin:0 2px;
+}
+.btn-tabs>li>a {
+    background: brown;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 1;
+}

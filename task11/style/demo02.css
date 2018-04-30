@@ -1,0 +1,22 @@
+.l-aside {
+    width: 200px;
+    height: 300px;
+    background: aqua;
+    float: left;
+}
+.r-aside {
+    width: 200px;
+    height: 300px;
+    background: aqua;
+    float: right;
+}
+.main {
+    height: 400px;
+    background: chocolate;
+    margin: 0 210px;
+}
+.layout::after {
+    content: "";
+    display: block;
+    clear: both;
+}

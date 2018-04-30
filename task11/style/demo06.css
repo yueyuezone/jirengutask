@@ -1,0 +1,22 @@
+.layout {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.main {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    border: brown solid 3px;
+    font-size: 0;
+}
+.main::before {
+    height: 100%;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+}
+.main img {
+    width: 50%;
+    vertical-align: middle;
+}

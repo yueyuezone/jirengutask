@@ -1,0 +1,11 @@
+.container {
+    width: 300px;
+    height: 200px;
+    background: rebeccapurple;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -100px;
+    opacity: 0.7;
+}

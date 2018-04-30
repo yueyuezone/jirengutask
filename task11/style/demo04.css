@@ -1,0 +1,12 @@
+.layout {
+    width: 800px;
+    margin:0 auto;
+}
+.main {
+    width: 600px;
+    margin: 0 auto;
+    background: rgb(194, 194, 194);
+    text-align: center;
+    padding: 30px 80px;
+    box-sizing: border-box;
+}

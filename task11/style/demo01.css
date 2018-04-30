@@ -1,0 +1,16 @@
+.layout::after {
+    content: "";
+    display: block;
+    clear: both;
+} 
+.layout .asider {
+    width: 200px;
+    height: 300px;
+    background: brown;
+    float: left;
+}
+.layout .main {
+    height: 400px;
+    background: aqua;
+    margin-left: 210px;;
+}
