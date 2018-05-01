@@ -1,0 +1,405 @@
+/*reset css*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font:14px/1.5 "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    color: #333;
+    box-sizing: border-box
+}
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.1;
+}
+/*common css*/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.btn {
+    background-color:#fed136;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 18px;
+    display: inline-block;
+    padding: 20px 40px;
+}
+.layout {
+    width: 1000px;
+    margin: 0 auto;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+section {
+    text-align: center;
+    padding: 150px 0;
+}
+section h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+
+}
+section h2 {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    color: #777;
+    margin-bottom: 75px;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(126, 126, 126);
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(126, 126, 126);
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(126, 126, 126);
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*header css*/
+header {
+    background: url(../img/1266731-haikyu.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+header nav {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+nav .narbar-lago {
+    float: left;
+    color: #fed136;
+    font-size: 40px;
+    font-style: italic;
+} 
+.navbar-nav {
+    float: right;
+    padding-right: 80px;
+}
+.navbar-nav>li {
+    float: left;
+}
+.navbar-nav>li>a {
+    display: block;
+    color: #fff;
+    padding: 10px 25px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.navbar-nav>li>a:hover {
+    color: fff;
+    background: #fed136;
+    border-radius: 4px;
+}
+.intro-text {
+    color: #fff;
+    padding: 200px 0;
+    text-align: center;
+}
+.intro-text h1 {
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+.intro-text h2 {
+    font-size: 75px;
+    margin-bottom: 50px;
+    line-height: 75px;
+}
+/*tv css*/
+.tv {
+    padding: 150px 0;
+}
+.intro-tv>li {
+    float: left;
+    margin: 0 15px;
+    width: calc(33.3333% - 30px);
+}
+.intro-tv li i {
+    font-size: 70px;
+    color: #fff;
+    background: #fed136;
+    border-radius: 70px;
+    padding: 20px;
+    cursor: pointer;
+}
+.intro-tv li h3 {
+    line-height: 3;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.intro-tv li p {
+    line-height: 1.75;
+    color: #777;
+    overflow: hidden;
+    height: 70px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+/*team css*/
+.team,
+.member {
+    background: #f7f7f7;
+}
+.team-list figure{
+    float: left;
+    margin: 15px;
+    width: calc(33.3333% - 30px);
+    background: #fff;
+    position: relative;
+}
+.team-list figure img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    cursor: pointer;
+}
+.team-list figure figcaption {
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 25px;
+}
+.team-list figure p {
+    padding-bottom: 25px;
+    font-size: 15px;
+    color: #777;
+    font-style: italic;
+    padding-top: 3px;
+}
+.team-list figure i {
+    position: absolute;
+    z-index: 2;
+    background: rgba(254, 209, 54, .8);
+    left: 0;
+    right: 0;
+    height: 200px;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 50px;
+    color: #fff;
+    opacity: 0;
+    cursor: pointer;
+    transition: all ease .5;
+    -webkit-transition: all ease .5;  
+}
+.team-list figure i::before {
+    line-height: 200px;
+   
+}
+.team-list figure i:hover {
+    opacity: 1;
+}
+/*timeline css*/
+.timeline-item::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.timeline-item:nth-child(2n+2) dt {
+    float: left;
+    margin-left: calc(50% - 85px);
+    margin-right: 40px;
+}
+.timeline-item:nth-child(2n+1) dt{
+    float: right;
+    margin-right: calc(50% - 85px);
+    margin-left: 40px;
+}
+.timeline-item {
+    margin-bottom: 120px;
+    position: relative;
+}
+.timeline-item dt {
+    width: 170px;
+    height: 170px;
+    border-radius:50%;
+    border: 7px solid #f1f1f1; 
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.timeline-item dt img {
+    height: 100%;
+    width: 100%;
+}
+.timeline-item:nth-child(2n+2) dd {
+    text-align: left;
+}
+.timeline-item:nth-child(2n+1) dd {
+    text-align: right
+}
+.timeline-item dd {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: .7em;
+}
+.timeline-item dd:last-child {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #777;
+    height: 100px;
+    overflow: hidden;
+}
+.timeline-item::after {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 180px;
+    position: absolute;
+    background: #f1f1f1;
+    left: 50%;
+    bottom: -170px;
+    z-index: -1;
+}
+.timeline-ct::after {
+    content: "to be continue";
+    display: block;
+    text-transform: uppercase;
+    width: 170px;
+    height: 170px;
+    box-sizing: border-box;
+    padding: 45px 20px;
+    background: #fed136;
+    margin-left: calc(50% - 85px);
+    color: #fff;
+    border-radius: 50%;
+    border: 7px solid #f1f1f1;
+    font-size: 20px;
+    font-weight: 700;
+}
+/*member css*/
+.intro-member figure{
+    float: left;
+    margin: 15px;
+    width: calc(33.3333% - 30px);
+    text-align: center;
+}
+.intro-member figure img{
+    width: 70%;
+    border: 7px #fff solid;
+    border-radius: 50%;
+}
+.intro-member figure figcaption {
+    padding-top: 25px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.intro-member figure h4 {
+    font-weight: 400;
+    color: #777;
+    line-height: 1.75;
+    margin-bottom: 10px;
+}
+.member-link a {
+    color: #222;
+    font-size: 40px;
+    margin: 0 8px;
+    transition: all .8s;
+}
+.member-link a:hover {
+    color: #fed136;
+}
+.school-intro {
+    font-size: 16px;
+    color: #777;
+    font-weight: 400;
+    margin-top: 40px;
+}
+/*contact css*/
+section.contact {
+    background-color:#222;
+    background-image: url(../img/map-image.png) 
+}
+section.contact h1 {
+    color: #fff;
+}
+.contact-form .contact-info {
+    float: left;
+    width: 48.5%;
+}
+.contact-form .contact-message {
+    float: right;
+    width: 48.5%;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .75);
+    line-height: 1.43;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+.contact-form textarea {
+    height: 236px;
+}
+.contact-btn {
+    clear: both;
+    width: 100%;
+    text-transform: uppercase;
+}
+.footer-ct {
+    padding: 20px 0;
+}
+.footer-ct>li {
+    float: left;
+    width: 33.3333%;
+    text-align: center;
+    line-height: 40px;;
+}
+.social-btn a{
+    font-size: 40px;
+    line-height: 40px;
+    color: #222;
+    display: inline-block;
+    transition: all .8;
+    margin: 0 5px;
+
+}
+.social-btn a:hover {
+    color: #fed136;
+}
+.quit-links a{
+    color: #fed136;
+    margin-left: 5px;
+}
+.quit-links a:hover {
+    text-decoration: underline;
+}
