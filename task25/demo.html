@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/demo.css">
+</head>
+<body>
+    <h2>事件传播</h2>
+    <div class="ct">
+        <h3>ct</h3>
+        <div class="box">
+            <h3>box</h3>
+            <div class="target">
+                <h3>target</h3>
+            </div>
+        </div>
+    </div>
+    <p>点击target可以通过控制台可知到</p>
+    <img src="https://i.loli.net/2018/07/04/5b3c4aed13ceb.png" alt="2018-07-04_121935.png" title="2018-07-04_121935.png" />
+    <h2>添加阻止事件传播方法</h2>
+    <p>在target上添加<code>e.stopPropagation()</code>就阻止了target事件向上冒泡，所以控制台打印出来</p>
+    <img src="https://i.loli.net/2018/07/04/5b3c4c756547e.png" alt="2018-07-04_122613.png" title="2018-07-04_122613.png" />
+    <p>并不会触发其他的事件</p>
+    <script src="./js/demo.js"></script>
+</body>
+</html>

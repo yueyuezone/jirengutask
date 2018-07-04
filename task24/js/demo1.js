@@ -17,3 +17,4 @@ $('#toggle1').onclick = function(){
 $('#toggle2').onclick = function(){
     $('.box').classList.toggle('active')
 }
+console.log(getComputedStyle($('.box h1'))['font-family'])
