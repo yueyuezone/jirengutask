@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <base href="/"> -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/demo.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <a class="login-btn" href="#">
+                <i class="fa fa-user-circle-o"></i>
+            </a>
+        </header>
+        <main>
+            <div class="flip-panel login">
+                <div class="login-panel">
+                    <a href="#" class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </a>
+                    <ul class="flip-tab">
+                        <li class="login-tab active">登录</li>
+                        <li class="register-tab">注册</li>
+                    </ul>
+                    <div class="login-form">
+                        <p class="errormsg"></p>
+                        <form action="#">
+                            <div class="input-field">
+                                <i class="fa fa-user-o"></i>
+                                <input type="text" name="username" placeholder="用户名">
+                            </div>
+                            <div class="input-field">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" name="password" placeholder="密码">
+                            </div>
+                            <div class="input-field">
+                                <input type="submit" value="登录"></input>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="register-panel">
+                    <a href="#" class="close-btn">
+                        <i class="fa fa-times"></i>
+                    </a>
+                    <ul class="flip-tab">
+                        <li class="login-tab">登录</li>
+                        <li class="register-tab active">注册</li>
+                    </ul>
+                    <div class="register-form">
+                        <form action="#">
+                            <div class="input-field">
+                                <i class="fa fa-user-o"></i>
+                                <input type="text" name="username" placeholder="请输入用户名">
+                            </div>
+                            <div class="input-field">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" name="password" placeholder="请输入密码">
+                            </div>
+                            <div class="input-field">
+                                <i class="fa fa-lock"></i>
+                                <input type="password" name="againpassword" placeholder="请再次输入密码">
+                            </div>
+                            <div class="input-field">
+                                <input type="submit" value="注册"></input>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./js/demo.js"></script>
+</body>
+
+</html>

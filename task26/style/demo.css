@@ -1,0 +1,108 @@
+html,body,.wrapper,main {
+    width: 100%;
+    height: 100%;
+}
+main {
+    background: linear-gradient(to right top, rgba(38,50,105,0.78), rgba(255,152,0,0.45)),url(../image/bg.png) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+header .login-btn {
+    float: right;
+    font-size: 24px;
+    color: #444;
+    margin: 20px;
+}
+.flip-panel {
+    display: none;
+}
+.flip-panel.show {
+    display: block;
+}
+.login-panel,
+.register-panel{
+    background-color:#fff; 
+    width:400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 1px;
+    padding: 16px;
+    box-shadow: 0 3px 4px 5px rgba(0,0,0,0.2);
+}
+.login-panel .close-btn,
+.register-panel .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+}
+.login-panel .flip-tab,
+.register-panel .flip-tab {
+    text-align: center;
+}
+.flip-tab li{
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 10px;
+    color: #666;
+    cursor: pointer;
+    padding-bottom:5px;
+}
+.flip-tab li.active {
+    border-bottom: 2px solid #444;
+    color: #444;
+}
+.login-form,
+.register-form {
+    padding: 20px 40px;
+   
+}
+.input-field {
+    position: relative;
+    margin-top: 11px;
+}
+.input-field i {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+}
+.input-field input[type='text'],
+.input-field input[type='password']{
+    outline: none;
+    padding: 10px 10px 10px 28px;
+    width: 100%;
+}
+.input-field input[type="submit"]{
+    padding: 6px 10px;
+    border: none;
+    background: #fff;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+    outline: none;
+}
+.flip-panel.login .register-panel,
+.flip-panel.register .login-panel {
+    transform: translate(-50%,-50%) rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 1s;
+}
+.flip-panel .login-panel,
+.flip-panel .register-panel{
+    transform: translate(-50%,-50%) rotateY(0deg);
+    backface-visibility: hidden;
+    transition: all 1s;
+}
+.flip-panel .errormsg {
+    color: #ff9800;
+    font-size: 12px;
+}
+/* .register-panel {
+    display: none;
+} */
