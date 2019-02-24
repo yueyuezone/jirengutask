@@ -2,10 +2,21 @@
   {"url":"./mp3/平凡之路.mp3",
     "name":"朴树",
     "title":"平凡之路",
-    "img":"./image/1.jpg"},{
+    "img":"./image/1.jpg"},
+		{
       "url":"./mp3/许嵩 - 雅俗共赏.mp3",
       "name":"许嵩",
       "title":"雅俗共赏",
       "img":"./image/2.jpg"
-    }
+    },
+		{
+		  "url":"./mp3/许嵩 - 雅俗共赏.mp3",
+		  "name":"许嵩334",
+		  "title":"雅俗共赏2341234",
+		  "img":"./image/1.jpg"
+		},
+		{"url":"./mp3/平凡之路.mp3",
+		  "name":"朴树dsfasdf",
+		  "title":"平凡之路dfasdf",
+		  "img":"./image/2.jpg"}
 ]

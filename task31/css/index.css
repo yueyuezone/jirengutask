@@ -71,7 +71,7 @@ body {
 .player-ct .progress .progress-now{
   background-color: #fff;
   height: 3px;
-  width: 60px;
+  width: 60%;
   position: relative;
 }
 .player-ct .time{
@@ -93,8 +93,15 @@ body {
 .play-list li {
   padding:10px 10px;
   cursor: pointer;
+	color: #fff;
   background: linear-gradient(to right, rgba(0,0,0,.6) , rgba(160,160,160,.6)); 
+}
+.play-list li.active {
+	background: #808080;
+	width: box-sizing;
+	border-right: #FFFFFF solid 15px;
 }
 .play-list li:hover {
   background:rgba(255,255,255,.6);
+	color: #000000;
 }
