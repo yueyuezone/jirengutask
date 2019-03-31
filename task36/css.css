@@ -1,0 +1,89 @@
+ul,li,div,p,h2 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+}
+.clearfix::after {
+	display: block;
+	content: '';
+	height: 0;
+	clear: both;
+}
+.layout{
+	width: 702px;
+	margin: 10px auto;
+}
+.layout h2 {
+	line-height: 2;
+}
+.jewelry_list .jewelry_item {
+	width: 220px;
+	padding: 10px 20px;
+	border: 1px solid #444444;
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	position: relative;
+	border-radius: 3px;
+}
+.jewelry_item .item_mask {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,.4);
+	z-index: 1;
+	opacity: 0;
+}
+.item_mask.hover {
+	opacity: 1;
+}
+.item_mask .remove_btn {
+	padding: 10px 20px;
+	display: block;
+	position: absolute;
+	z-index: 2;
+	background: #fff;
+	border-radius: 3px;
+	border:1px solid crimson;
+	color: crimson;
+	left: 50%;
+	top: 70%;
+	transform: translateX(-50%);
+}
+	
+.jewelry_item:nth-child(3n+1){
+	margin-left: 0px;
+	clear: both;
+}
+.jewelry_content i {
+	width: 100%;
+	display: block;
+}
+.jewelry_content i img {
+	width: 100%;
+	display: block;
+}
+.jewelry_content p {
+	line-height: 2;
+}
+.jewelry_content span {
+	color: red;
+}
+.handle_list a {
+	display: inline-block;
+	background: #fff;
+	border-radius: 3px;
+	border:1px solid crimson;
+	color: crimson;
+	padding: 7px 15px;
+}
+.handle_list a+a {
+	margin-left: 15px;
+}
