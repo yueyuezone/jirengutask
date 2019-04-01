@@ -1,17 +1,18 @@
 var common = {
 	render:function(obj){
 		var template = $(`
-		<a href="#" class="movie-item">
+		<div class="movie-item">
+		<a href="#" >
 			<div class="movie-img">
 				<img src="" >
 			</div>
 			<div class="movie-detail">
 				<h4></h4>
-				<p><span>1899</span><em></em></p>
+				<p><span></span><em></em></p>
 				<p></p>
-				<p>是打发斯蒂芬</p>
+				<p></p>
 			</div>
-		</a>`)
+		</a></div>`)
 		template.find('.movie-item').attr('href',obj.alt)
 		template.find('.movie-img img').attr('src',obj.images.small)
 		template.find('.movie-detail h4').text(obj.title)
