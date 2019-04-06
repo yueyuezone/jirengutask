@@ -1,0 +1,8 @@
+.waterfall {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+.waterfall img {
+	position: absolute;
+}
