@@ -1,6 +1,6 @@
 ## 新闻瀑布流
 
-预览地址
+[预览地址](https://pacezone.github.io/jirengutask/task39/compLayout/index.html)
 
 ### 懒加载原理
 - 对窗口的滚动事件进行监听

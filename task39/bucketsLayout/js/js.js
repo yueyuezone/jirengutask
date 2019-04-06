@@ -62,6 +62,7 @@ class Loader{
 		this.searchVal = ''
 		this.pageData = []
 		this.total =0
+		this.isLoading=false
 		this.bind()
 		// this.loadData()
 	}
@@ -71,19 +72,24 @@ class Loader{
 			this.page = 1
 			this.loadData().then(ret=>{
 				this.pageData = JSON.parse(JSON.stringify(ret.hits))
-				this.total = res.totalHits
+				this.total = ret.totalHits
 				Event.publish('load-first',this.pageData)
 			})
 		})
 		Event.subscribe('bottom',e=>{
-			++this.page
-			this.loadData().then(ret=>{
-				this.pageData = JSON.parse(JSON.stringify(ret.hits))
-				// Event.publish('load-first',this.totleData)
-			})
+			if(!this.isLoading){
+				++this.page
+				this.loadData().then(ret=>{
+					this.isLoading = false
+					this.pageData = JSON.parse(JSON.stringify(ret.hits))
+					Event.publish('load-more',this.totleData)
+				})
+			}
+			
 		})
 	}
 	loadData(){
+		this.isLoading = true
 		return fetch(this.fetchUrl(this.url,{
 			key: '5856858-0ecb4651f10bff79efd6c1044',
 			image_type: 'photo',
@@ -109,12 +115,27 @@ class Layout{
 		this.rowList=[]
 		this.rowBaseHeight = 200
 		this.totleWidth = 0
+		this.allImgInfo = []
 		this.bind()
 	}
 	bind(){
 		Event.subscribe('load-first',data=>{
+			this.$container.innerHTML = ''
+			this.rowList = []
+			this.totleWidth = 0
+			this.allImgInfo =[...data]
 			this.countLayout(data)
 		})
+		Event.subscribe('load-more',data=>{
+			this.allImgInfo.push(...data)
+			this.countLayout(data)
+		})
+		Event.subscribe('resize', e => {
+			this.mainNode.innerHTML = ''
+			this.rowList = []
+			this.rowTotalWidth = 0
+			this.countLayout(this.allImgInfo)
+		  })
 	}
 	countLayout(info){
 		let ctW = parseInt(getComputedStyle(this.$container).width)
