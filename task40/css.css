@@ -99,21 +99,21 @@ section {
     width: calc(100% - 52vh)
 }
 .music-detail .music-tags span{
-    padding: 0.5em 1em;
-    font-size: 1vh;
+    padding: 0.5em 1.5em;
+    font-size: 2vh;
     display: inline-block;
     background-color: #969696; 
     margin-right: 1em;
 }
 .music-title {
     color: #fff;
-    padding: 1.5vh 0;
-    font-size: 4vh;
+    padding: 3vh 0;
+    font-size: 6vh;
 }
 .music-hot {
     display: flex;
     justify-content: flex-start;
-    margin-top: 16vh;
+    margin-top: 14vh;
     margin-bottom: 4vh;
     width:100%;
 }
@@ -121,13 +121,13 @@ section {
     flex: 1;
 }
 .music-hot li {
-    font-size: 2vh;
+    font-size: 3vh;
 }
 .music-hot li i {
-    font-size: 2vh;
+    font-size: 3vh;
 }
 .music-hot li span {
-    padding-left: .7vh;
+    padding-left: 1vh;
 }
 .music-progress-detail {
     width: 100%;
@@ -155,12 +155,12 @@ section {
     text-align: right;
 }
 .music-singer {
-    font-size: 2vh;
+    font-size: 3vh;
     padding-top: 3vh;
     padding-bottom: 2vh;
 }
 .musice-word {
-    font-size: 1.5vh;
+    font-size: 3vh;
     color: rgba(255,255,255,.4)
 }
 @keyframes leftBtn {
