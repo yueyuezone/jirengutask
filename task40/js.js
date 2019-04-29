@@ -151,7 +151,7 @@ class Fm{
            Event.trigger('music-page')
            this.clock = setTimeout(()=>{
              Event.trigger('change-page')
-        },1000)
+        },5000)
         })
         this.$musicprogress.on('click',function(e){
             Event.trigger('progress-change',e.offsetX/$(this).width()*100)
