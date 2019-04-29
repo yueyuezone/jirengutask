@@ -46,6 +46,9 @@ html,body,section{
 section {
    overflow: hidden;
 }
+.music-ct {
+    display: none;
+}
 .music-ct main {
     height: calc(100% - 24vh);
 }
@@ -59,6 +62,14 @@ section {
     content: '';
     display: block;
     height: 0;
+}
+.footer-wr {
+    position: relative;
+}
+.footer-ct {
+    position: relative;
+    overflow: hidden;
+    height: 24vh;
 }
 .music-ct footer span {
     position: absolute;
@@ -108,23 +119,25 @@ section {
 .music-title {
     color: #fff;
     padding: 3vh 0;
-    font-size: 6vh;
+    font-size: 5vh;
 }
 .music-hot {
     display: flex;
     justify-content: flex-start;
-    margin-top: 14vh;
-    margin-bottom: 4vh;
+    margin-top: 12vh;
+    margin-bottom: 3vh;
     width:100%;
 }
 .music-hot li {
     flex: 1;
+    
 }
 .music-hot li {
     font-size: 3vh;
 }
 .music-hot li i {
     font-size: 3vh;
+    cursor: pointer;
 }
 .music-hot li span {
     padding-left: 1vh;
@@ -166,21 +179,21 @@ section {
 @keyframes leftBtn {
     from {
         opacity: 1;
-        left: -8vh;
+        left: -5vh;
     }
     to {
-        opacity: 0;
-        left: -12vh;
+        opacity: .2;
+        left: -8vh;
     }
 }
 @keyframes rightBtn {
     from {
         opacity: 1;
-        right: -8vh;
+        right: -5vh;
     }
     to {
-        opacity: 0;
-        right: -12vh;
+        opacity: .2;
+        right: -8vh;
     }
 }
 .left-btn {
@@ -199,9 +212,12 @@ section {
     opacity: 1;
 }
 .footer-tags {
-    position: relative;
+    position: absolute;
 }
-
+.animation-word {
+    display: inline-block;
+    opacity: 0;
+}
 
 .footer-tags li {
     float: left;
@@ -225,6 +241,83 @@ section {
 }
 .cover-box {
     display: none;
+}
+.cover-box main {
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+
+}
+.cover-box main div {
+    align-items: center;
+    position: relative;
+}
+.cover-box main .lcr-ct {
+    padding-left: 5vh;
+    margin-top: 16vh;
+    flex: 1;
+    height: 60vh;
+    overflow: hidden;
+    font-size: 2.4vh;
+    line-height: 2;
+    color: rgba(255,255,255,.6);
+    position: relative;
+}
+.lcr-ct ul {
+    position: absolute;
+    top: 0;
+}
+.show-lrc {
+    color: #fff;
+    font-size: 3vh;
+}
+.cover-box main figure {
+    margin-top: 16vh;
+    width: 50vh;
+    height: 60vh;
+    background-image: url(./image/2.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.cover-box footer {
+    height: 12vh;
+    background-color: rgba(255,255,255,.1);
+    position: relative;
+}
+.cover-box footer .progress {
+    margin: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(255,255,255,.3);
+    position: absolute;
+    top: 0;
+}
+.cover-box footer .progress span {
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    background: rgba(255,255,255,.4);
+}
+.cover-box footer .music-title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 3vh;
+    padding-top: 2vh;
+
+}
+.cover-box footer .music-singer {
+    padding-top: 1vh;
+    text-align: center;
+    font-size: 2vh;
+    color: rgba(255,255,255,.6);
+}
+.cover-box footer .play-time {
+    position: absolute;
+    bottom: 2.5vh;
+    right: 3vh;
+    color: #fff;
 }
 .bg {
     position: fixed;
