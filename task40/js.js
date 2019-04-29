@@ -151,7 +151,7 @@ class Fm{
            Event.trigger('music-page')
            this.clock = setTimeout(()=>{
              Event.trigger('change-page')
-        },5000)
+            },5000)
         })
         this.$musicprogress.on('click',function(e){
             Event.trigger('progress-change',e.offsetX/$(this).width()*100)
@@ -233,7 +233,9 @@ class renderFm{
             if(timers){
                 timers.forEach(t=>{
                     this.lrcObj[t]=i.replace(/\[.+?\]/g, '')
-                    this.lrcLine+=`<li data-time="${t}">${this.lrcObj[t]}</li>`
+                    if(this.lrcObj[t]!==''){
+                        this.lrcLine+=`<li data-time="${t}">${this.lrcObj[t]}</li>`
+                    }
                 })
             }
         })
@@ -264,11 +266,11 @@ class renderFm{
         let showli =$(".lcr-ct ul li[data-time='"+(m+':'+s)+"']")
         if(showli.length!==0){
             showli.addClass('show-lrc').siblings().removeClass('show-lrc')
-            setTimeout(()=>{
-                if(showli.offset().top>$(".lcr-ct").height()/2){
-                    $(".lcr-ct ul").css({top:-(showli.offset().top-$(".lcr-ct").height()/2)})
-                }
-            },0)
+            if(showli.position().top>$(".lcr-ct").height()/2){
+                $(".lcr-ct ul").css({top:-(showli.position().top+12-$(".lcr-ct").height()/2)})
+            } else {
+                $(".lcr-ct ul").css({top:0})
+            }
         }
     }
 }
@@ -278,6 +280,7 @@ class AudioApp {
         this.audio = new Audio()
         this.audio.autoplay=true
         this.timer = null
+        this.update = true
         this.bind()
     }
     bind(){
@@ -293,14 +296,20 @@ class AudioApp {
         Event.on('progress-change',e=>{
             this.audio.currentTime = this.audio.duration * e/100
         })
-        this.audio.addEventListener('playing',()=>{
-            this.timer =setInterval(()=>{
-                Event.trigger('progress-time',{
-                    currentTime:this.audio.currentTime,
-                    duration:this.audio.duration
-                })
-            },1000)
-        })
+
+         this.audio.ontimeupdate=(e)=>{
+             
+             if(this.update){
+                 this.update=false
+                 setTimeout(()=>{
+                    Event.trigger('progress-time',{
+                        currentTime:this.audio.currentTime,
+                        duration:this.audio.duration
+                    })
+                    this.update=true
+                 },1000)
+             }
+        }
         this.audio.addEventListener('ended',()=>{
             Event.trigger('ended')
         })

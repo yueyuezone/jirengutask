@@ -47,7 +47,7 @@ section {
    overflow: hidden;
 }
 .music-ct {
-    display: none;
+    /* display: none; */
 }
 .music-ct main {
     height: calc(100% - 24vh);
