@@ -59,7 +59,7 @@ audio.ontimeupdate=(e)=>{
 2. 面向对象编程初体验
 - 将整个页面拆分成两大块
 
-```
+```javascript
 Footer
 主要显示页尾的列表交互，和点击列表load Fm
 
