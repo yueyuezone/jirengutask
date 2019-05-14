@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = 'ahbbccdeddddfg';
+        String.prototype.getMostOften=function(){
+            let o = this.split('').reduce((t,c)=>{
+                 t[c]++||(t[c]=1)
+                 return t
+            },{})
+            let maxN=0
+            let maxS=''
+            Object.keys(o).forEach(i=>{
+                if(o[i]>maxN){
+                    maxN=o[i]
+                    maxS=i
+                }
+            })
+            return maxS
+        }
+        var ch = str.getMostOften();
+        console.log(ch); //d , 因为d 出现了5次
+        let d = new String('1')
+        // console.log(d instanceof String);
+        
+        
+        
+        function A(){
+            this.name = 'hjhj'
+            this.getPro = function(){}
+        }
+        
+        A.prototype.setProto=function(){console.log(this)}
+        let a = new A()
+        console.log(a);
+        
+        console.log(A.hasOwnProperty('setProto'));
+        console.log(A.hasOwnProperty('toString'));
+        console.log(a.hasOwnProperty('getPro'));
+        console.log(A.hasOwnProperty('name'));
+        // const object1 = new Object();
+// object1.property1 = 42;
+
+// console.log(object1.hasOwnProperty('property1'));
+// // expected output: true
+
+// console.log(object1.hasOwnProperty('toString'));
+// // expected output: false
+
+// console.log(object1.hasOwnProperty('hasOwnProperty'));
+// expected output: false
+
+
+        
+        
+    </script>
+</body>
+</html>

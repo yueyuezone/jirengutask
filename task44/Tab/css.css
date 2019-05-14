@@ -1,0 +1,34 @@
+.tab {
+    margin: 50px auto;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #ccc;
+}
+.tab .tab-pane {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+.tab .tab-pane li {
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+}
+.tab-pane li+li{
+    border-left: solid 1px #ccc;
+}
+.tab-pane li.active {
+    background: #e5e5e5;
+    box-shadow: inset 0 0 4px 1px #ccc;
+}
+.tab-ct {
+    height: calc(100% - 42px);
+}
+.tab-ct li {
+    height: 100%;
+    display: none;
+}
+.tab-ct li.active{
+    display: block;
+}

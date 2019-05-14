@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>dfjalskdfjk</p>
+    <script>
+        "use strict"
+        let app = {
+            ct: document.querySelector('p'),
+            bind: function () {
+                this.ct.addEventListener('click', this.say)
+                setTimeout(() => {
+                    // console.log(this);
+
+                }, 0)
+            },
+            say: () => {
+                // console.log(this);
+            }
+        }
+        app.bind()
+        app.say()
+
+        // function Person(name, sex) {
+        //     this.name = name
+        //     this.sex = name
+        // }
+        // Person.prototype.printName = function () {
+        //     console.log(this);
+        // }
+        // let p = new Person('pace', 18)
+        // p.printName()
+        //Person.printName()
+        function Person(name, sex) {
+            this.name = name
+            this.sex = sex
+        }
+
+        function Male(name, sex, age) {
+            Person.call(this, sex, age)
+            this.age = age
+        }
+        Person.prototype.printName = function () {
+            console.log(this)
+        }
+        //es6
+        Male.prototype = Object.create(Person.prototype)
+        //es5
+        Male.prototype = new Person
+        Male.prototype.constructor = Male
+        let m = new Male('pace', 'male', 18)
+        m.printName()
+        func() 
+function func() { 
+  console.log(this)
+}
+    </script>
+</body>
+
+</html>
