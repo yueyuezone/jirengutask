@@ -9,7 +9,6 @@ Datepicker.prototype = {
         this.render()
         this.setCalendar()
         this.bind()
-        this.$datepicker.hide()
     },
     setDefaultDate(){
         if((new Date(this.$target.attr('init-date'))).toString()!=='Invalid Date'){
@@ -22,7 +21,7 @@ Datepicker.prototype = {
     },
     render () {
         this.$datepicker = $(`
-        <div class="date-picker">
+        <div class="date-picker" style="display:none">
             <div class="date-picker-header">
                 <span class="pre btn">&lt;</span><span class="head-date"></span><span class="next btn">&gt;</span>
             </div>
