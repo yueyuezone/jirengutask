@@ -43,7 +43,7 @@ function Person(name,sex){
     this.sex=sex
 }
 function Male(name,sex,age){
-    Person.call(this,sex,age)
+    Person.call(this,name,sex)
     this.age=age
 }
 ```
