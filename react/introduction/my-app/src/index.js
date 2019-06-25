@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import store from './countRedux/index'
-import App from './components/context/App';
+import App from './Button/app';
 // import * as serviceWorker from './serviceWorker';
 
 
