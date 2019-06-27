@@ -5,15 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .btnStyle {
+            background: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, .4);
+            padding: 7px 10px;
+            border-radius: 4px;
+        }
+        .inputStyle {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, .4);
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
     <div id="app"><div>
         <span>
              my name is {{name}},age is {{age}}
         </span>
-        <p><input type="text"></p>
-       
-        
+        <p><input v-model="name" type="text" v-class='{inputStyle:isActive}'></p>
+        <button v-class="{btnStyle:isActive}" v-on:click="changeBg">点击改变颜色</button>
     </div></div>
     <script src="./other.js"></script>
 </body>

@@ -117,8 +117,6 @@ class mvvm{
             let raw = match[0]
             let key = match[1].trim()
             node.nodeValue = node.nodeValue.replace(raw, this.$data[key])
-            console.log(this.$data[key]);
-            
             new Observer(this,key,function(val,oldVal){
                 node.nodeValue = node.nodeValue.replace(oldVal, val)
             })
